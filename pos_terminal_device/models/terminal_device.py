@@ -15,3 +15,6 @@ class TerminalDevice(models.Model):
         ('offline', 'Offline'),
         ('online', 'Online'),
     ], default='offline')
+
+    def action_test_connection(self):
+        return True

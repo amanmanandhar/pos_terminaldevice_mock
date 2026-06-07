@@ -19,6 +19,10 @@
         <field name="model">terminal.device</field>
         <field name="arch" type="xml">
             <form string="Terminal device form">
+            <header>
+                <button name="action_test_connection" class="btn btn-primary" string="Test Connection" type="object"/>
+                <field name="status" widget="statusbar" statusbar_visible="online,offline,error"/>
+            </header>
                 <sheet>
                     <group string="Device Information">
                         <field name="name"/>
