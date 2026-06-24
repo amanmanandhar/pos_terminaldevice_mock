@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="notice_board.list">
+      <field name="name">notice_board list</field>
+      <field name="model">notice_board.notice_board</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="notice_board.action_window">
+      <field name="name">notice_board window</field>
+      <field name="res_model">notice_board.notice_board</field>
+      <field name="view_mode">list,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="notice_board.action_server">
+      <field name="name">notice_board server</field>
+      <field name="model_id" ref="model_notice_board_notice_board"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="notice_board" id="notice_board.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="notice_board.menu_1" parent="notice_board.menu_root"/>
+    <menuitem name="Menu 2" id="notice_board.menu_2" parent="notice_board.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="notice_board.menu_1_list" parent="notice_board.menu_1"
+              action="notice_board.action_window"/>
+    <menuitem name="Server to list" id="notice_board" parent="notice_board.menu_2"
+              action="notice_board.action_server"/>
+-->
+  </data>
+</odoo>
